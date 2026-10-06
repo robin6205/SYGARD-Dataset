@@ -6,7 +6,7 @@ The files contain two kinds of tracks: aircraft positions reconstructed from the
 
 ## Files
 
-This folder contains nine files. The JSONL files have one JSON object per line.
+This folder contains seven files. The JSONL files have one JSON object per line.
 
 | File | Contents |
 | --- | --- |
@@ -16,17 +16,13 @@ This folder contains nine files. The JSONL files have one JSON object per line.
 | `metadata.json` | Coordinate origin, camera calibration, aircraft counts and types, and track ID mappings. |
 | `camera_poses.jsonl` | Position and orientation for each of the 2,698 camera images. |
 | `adsb_observations.jsonl` | ADS-B input observations, including points outside the five-minute interval used to interpolate routes. |
-| `video_index.jsonl` | Image timestamps for the 898 frames of the accompanying video. |
-| `four_panel_synchronized_email.mp4` | Synchronized camera views and a 3D camera-track plot. |
 | `tracks.png` | Top-down and 3D plots of camera tracks, nearby simulated tracks, and camera locations. |
-
-The accompanying `four_panel_synchronized_email.mp4` shows the three camera views and a 3D camera-track plot at matched times. The plot clears a track ten seconds after its last measurement. `tracks.png` shows the full run.
 
 ## Track records
 
 Each TFRecord has 34 Waymo Motion `Scenario` messages. Each message has 91 timestamps at 0.1-second intervals and covers 9.0 seconds. Most adjacent messages share one timestamp; the final message overlaps the previous one to end at 300.0 seconds. `current_time_index` is 10.
 
-The two files use independent track IDs. In `metadata.json`, `track_ids.camera_tracks[].waymo_track_id` matches `Track.id` in `camera_tracks.tfrecord`. These IDs are 0–51; the processing and video IDs (`tracker_id`) are 1–52. A camera ID does not identify an ADS-B aircraft.
+The two files use independent track IDs. In `metadata.json`, `track_ids.camera_tracks[].waymo_track_id` matches `Track.id` in `camera_tracks.tfrecord`. These IDs are 0–51; the tracker IDs used during processing (`tracker_id`) are 1–52. A camera ID does not identify an ADS-B aircraft.
 
 All 52 camera IDs are included. Ten passed the motion check (`confirmed_moving=true` in `metadata.json`). That check required at least five detections spanning 0.3 seconds, 15 m of net 3D movement, and 8 pixels of net movement in one camera. One aircraft can produce multiple IDs if the tracker loses it.
 
@@ -40,7 +36,7 @@ The following Waymo fields are unset: `sdc_track_index`, `tracks_to_predict`, `o
 
 Positions use local east, north, up coordinates in metres: x=east, y=north, z=up. The WGS84 origin is 41.980103° N, 87.903868° W, altitude 2,250 m. Ground-level z is roughly −2,000 m because the origin is above the airport.
 
-Track times are seconds since September 28, 2026, 18:00:00 UTC. Camera image times use simulator nanoseconds; the simulator clock was 1,010,000,000 ns at that UTC start. Match `video_index.jsonl` timestamps to `camera_poses.jsonl` to find poses for video frames.
+Track times are seconds since September 28, 2026, 18:00:00 UTC. Camera image times use simulator nanoseconds; the simulator clock was 1,010,000,000 ns at that UTC start. Image timestamps are in `camera_poses.jsonl`.
 
 Camera poses contain `xyz_enu_m` and `quaternion_xyzw_enu`. The quaternion maps the camera's local axes (+X forward, +Y right, +Z down) into east, north, up. Camera intrinsics for the saved 1920×1080 images are in `metadata.json`.
 
