@@ -1,0 +1,716 @@
+{
+  "airport": "KORD",
+  "interval_utc": [
+    "2026-09-28T18:00:00Z",
+    "2026-09-28T18:05:00Z"
+  ],
+  "scenario_format": "Waymo Motion Scenario protobuf in uncompressed TFRecord",
+  "scenario_count_per_stream": 34,
+  "timestamps_per_scenario": 91,
+  "sample_interval_s": 0.1,
+  "current_time_index": 10,
+  "coordinate_frame": {
+    "axes": "right-handed local ENU: x=east, y=north, z=up, meters",
+    "origin_wgs84": {
+      "latitude_deg": 41.980103,
+      "longitude_deg": -87.903868,
+      "altitude_m": 2250.0
+    },
+    "native_simulation_conversion": "[east, north, up] = [native_x, -native_y, -native_z]",
+    "timestamp_seconds": "elapsed since 2026-09-28T18:00:00Z",
+    "image_timestamp_ns": "simulator clock nanoseconds",
+    "sim_clock_at_start_ns": 1010000000
+  },
+  "camera_intrinsics": {
+    "Camera1": {
+      "name": "Camera 1",
+      "width_px": 1920,
+      "height_px": 1080,
+      "horizontal_fov_deg": 90.0,
+      "fx_px": 960.0000000000001,
+      "fy_px": 960.0000000000001,
+      "cx_px": 960.0,
+      "cy_px": 540.0,
+      "distortion": "none in simulator",
+      "native_camera_axes": "+X forward, +Y right, +Z down",
+      "pose_frame": "local ENU, quaternion rotates native camera axes to ENU"
+    },
+    "Camera2": {
+      "name": "Camera 2",
+      "width_px": 1920,
+      "height_px": 1080,
+      "horizontal_fov_deg": 90.0,
+      "fx_px": 960.0000000000001,
+      "fy_px": 960.0000000000001,
+      "cx_px": 960.0,
+      "cy_px": 540.0,
+      "distortion": "none in simulator",
+      "native_camera_axes": "+X forward, +Y right, +Z down",
+      "pose_frame": "local ENU, quaternion rotates native camera axes to ENU"
+    },
+    "Camera_5f1324f5ce26": {
+      "name": "Camera 3",
+      "width_px": 1920,
+      "height_px": 1080,
+      "horizontal_fov_deg": 70.0,
+      "fx_px": 1371.0220864724301,
+      "fy_px": 1371.0220864724301,
+      "cx_px": 960.0,
+      "cy_px": 540.0,
+      "distortion": "none in simulator",
+      "native_camera_axes": "+X forward, +Y right, +Z down",
+      "pose_frame": "local ENU, quaternion rotates native camera axes to ENU"
+    }
+  },
+  "track_ids": {
+    "simulation_truth": [
+      {
+        "actor_name": "ADSB_a06f5a",
+        "icao24": "a06f5a",
+        "adsb_reported_type": "E75L",
+        "rendered_model": "a319",
+        "waymo_track_id": 0,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a097ce",
+        "icao24": "a097ce",
+        "adsb_reported_type": "B737",
+        "rendered_model": "a319",
+        "waymo_track_id": 1,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a0acb6",
+        "icao24": "a0acb6",
+        "adsb_reported_type": "B738",
+        "rendered_model": "a319",
+        "waymo_track_id": 2,
+        "has_valid_rendered_pose": false
+      },
+      {
+        "actor_name": "ADSB_a0acf8",
+        "icao24": "a0acf8",
+        "adsb_reported_type": "B738",
+        "rendered_model": "a319",
+        "waymo_track_id": 3,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a0b6ea",
+        "icao24": "a0b6ea",
+        "adsb_reported_type": "E75L",
+        "rendered_model": "a319",
+        "waymo_track_id": 4,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a0b7b7",
+        "icao24": "a0b7b7",
+        "adsb_reported_type": "A21N",
+        "rendered_model": "a319",
+        "waymo_track_id": 5,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a0b7fd",
+        "icao24": "a0b7fd",
+        "adsb_reported_type": "A21N",
+        "rendered_model": "a319",
+        "waymo_track_id": 6,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a1ecff",
+        "icao24": "a1ecff",
+        "adsb_reported_type": "CRJ2",
+        "rendered_model": "a319",
+        "waymo_track_id": 7,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a2479f",
+        "icao24": "a2479f",
+        "adsb_reported_type": "CRJ2",
+        "rendered_model": "a319",
+        "waymo_track_id": 8,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a3ca01",
+        "icao24": "a3ca01",
+        "adsb_reported_type": "B38M",
+        "rendered_model": "a319",
+        "waymo_track_id": 9,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a3d326",
+        "icao24": "a3d326",
+        "adsb_reported_type": "A21N",
+        "rendered_model": "a319",
+        "waymo_track_id": 10,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a562aa",
+        "icao24": "a562aa",
+        "adsb_reported_type": "A320",
+        "rendered_model": "a319",
+        "waymo_track_id": 11,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a58dc2",
+        "icao24": "a58dc2",
+        "adsb_reported_type": "CRJ2",
+        "rendered_model": "a319",
+        "waymo_track_id": 12,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a5ea5c",
+        "icao24": "a5ea5c",
+        "adsb_reported_type": "A320",
+        "rendered_model": "a319",
+        "waymo_track_id": 13,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a61d00",
+        "icao24": "a61d00",
+        "adsb_reported_type": "A320",
+        "rendered_model": "a319",
+        "waymo_track_id": 14,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a61f05",
+        "icao24": "a61f05",
+        "adsb_reported_type": "B739",
+        "rendered_model": "a319",
+        "waymo_track_id": 15,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a6898d",
+        "icao24": "a6898d",
+        "adsb_reported_type": "CRJ7",
+        "rendered_model": "a319",
+        "waymo_track_id": 16,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a7d3fe",
+        "icao24": "a7d3fe",
+        "adsb_reported_type": "CRJ7",
+        "rendered_model": "a319",
+        "waymo_track_id": 17,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a9ccde",
+        "icao24": "a9ccde",
+        "adsb_reported_type": "A319",
+        "rendered_model": "a319",
+        "waymo_track_id": 18,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_a9f87d",
+        "icao24": "a9f87d",
+        "adsb_reported_type": "E75L",
+        "rendered_model": "a319",
+        "waymo_track_id": 19,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_aa01b3",
+        "icao24": "aa01b3",
+        "adsb_reported_type": "E170",
+        "rendered_model": "a319",
+        "waymo_track_id": 20,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_aa25a6",
+        "icao24": "aa25a6",
+        "adsb_reported_type": "CRJ7",
+        "rendered_model": "a319",
+        "waymo_track_id": 21,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_aa2d14",
+        "icao24": "aa2d14",
+        "adsb_reported_type": "CRJ7",
+        "rendered_model": "a319",
+        "waymo_track_id": 22,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_aa31ed",
+        "icao24": "aa31ed",
+        "adsb_reported_type": "CRJ7",
+        "rendered_model": "a319",
+        "waymo_track_id": 23,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_aa7dd6",
+        "icao24": "aa7dd6",
+        "adsb_reported_type": "E75L",
+        "rendered_model": "a319",
+        "waymo_track_id": 24,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_aa92c2",
+        "icao24": "aa92c2",
+        "adsb_reported_type": "E75L",
+        "rendered_model": "a319",
+        "waymo_track_id": 25,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_aaa593",
+        "icao24": "aaa593",
+        "adsb_reported_type": "B738",
+        "rendered_model": "a319",
+        "waymo_track_id": 26,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_ab5a1d",
+        "icao24": "ab5a1d",
+        "adsb_reported_type": "A319",
+        "rendered_model": "a319",
+        "waymo_track_id": 27,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_ab8b0b",
+        "icao24": "ab8b0b",
+        "adsb_reported_type": "B789",
+        "rendered_model": "a319",
+        "waymo_track_id": 28,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_ac02b4",
+        "icao24": "ac02b4",
+        "adsb_reported_type": "B738",
+        "rendered_model": "a319",
+        "waymo_track_id": 29,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_ac2567",
+        "icao24": "ac2567",
+        "adsb_reported_type": "B788",
+        "rendered_model": "a319",
+        "waymo_track_id": 30,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_ac267c",
+        "icao24": "ac267c",
+        "adsb_reported_type": "B738",
+        "rendered_model": "a319",
+        "waymo_track_id": 31,
+        "has_valid_rendered_pose": false
+      },
+      {
+        "actor_name": "ADSB_ac4e85",
+        "icao24": "ac4e85",
+        "adsb_reported_type": "A319",
+        "rendered_model": "a319",
+        "waymo_track_id": 32,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_ac85ee",
+        "icao24": "ac85ee",
+        "adsb_reported_type": "CRJ2",
+        "rendered_model": "a319",
+        "waymo_track_id": 33,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_acae9a",
+        "icao24": "acae9a",
+        "adsb_reported_type": "CRJ2",
+        "rendered_model": "a319",
+        "waymo_track_id": 34,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_accaf4",
+        "icao24": "accaf4",
+        "adsb_reported_type": "CRJ2",
+        "rendered_model": "a319",
+        "waymo_track_id": 35,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_ad0022",
+        "icao24": "ad0022",
+        "adsb_reported_type": "CRJ2",
+        "rendered_model": "a319",
+        "waymo_track_id": 36,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_ad7da2",
+        "icao24": "ad7da2",
+        "adsb_reported_type": "B738",
+        "rendered_model": "a319",
+        "waymo_track_id": 37,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_ad83f3",
+        "icao24": "ad83f3",
+        "adsb_reported_type": "E145",
+        "rendered_model": "a319",
+        "waymo_track_id": 38,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_c05ea2",
+        "icao24": "c05ea2",
+        "adsb_reported_type": "A320",
+        "rendered_model": "a319",
+        "waymo_track_id": 39,
+        "has_valid_rendered_pose": true
+      },
+      {
+        "actor_name": "ADSB_c0850c",
+        "icao24": "c0850c",
+        "adsb_reported_type": "DH8D",
+        "rendered_model": "a319",
+        "waymo_track_id": 40,
+        "has_valid_rendered_pose": true
+      }
+    ],
+    "camera_tracks": [
+      {
+        "tracker_id": 1,
+        "waymo_track_id": 0,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": true
+      },
+      {
+        "tracker_id": 2,
+        "waymo_track_id": 1,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 3,
+        "waymo_track_id": 2,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 4,
+        "waymo_track_id": 3,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 5,
+        "waymo_track_id": 4,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 6,
+        "waymo_track_id": 5,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 7,
+        "waymo_track_id": 6,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 8,
+        "waymo_track_id": 7,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": true
+      },
+      {
+        "tracker_id": 9,
+        "waymo_track_id": 8,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 10,
+        "waymo_track_id": 9,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 11,
+        "waymo_track_id": 10,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 12,
+        "waymo_track_id": 11,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 13,
+        "waymo_track_id": 12,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 14,
+        "waymo_track_id": 13,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 15,
+        "waymo_track_id": 14,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 16,
+        "waymo_track_id": 15,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 17,
+        "waymo_track_id": 16,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 18,
+        "waymo_track_id": 17,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 19,
+        "waymo_track_id": 18,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": true
+      },
+      {
+        "tracker_id": 20,
+        "waymo_track_id": 19,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 21,
+        "waymo_track_id": 20,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 22,
+        "waymo_track_id": 21,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": true
+      },
+      {
+        "tracker_id": 23,
+        "waymo_track_id": 22,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 24,
+        "waymo_track_id": 23,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 25,
+        "waymo_track_id": 24,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 26,
+        "waymo_track_id": 25,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 27,
+        "waymo_track_id": 26,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": true
+      },
+      {
+        "tracker_id": 28,
+        "waymo_track_id": 27,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 29,
+        "waymo_track_id": 28,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 30,
+        "waymo_track_id": 29,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 31,
+        "waymo_track_id": 30,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 32,
+        "waymo_track_id": 31,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": true
+      },
+      {
+        "tracker_id": 33,
+        "waymo_track_id": 32,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": true
+      },
+      {
+        "tracker_id": 34,
+        "waymo_track_id": 33,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 35,
+        "waymo_track_id": 34,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 36,
+        "waymo_track_id": 35,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 37,
+        "waymo_track_id": 36,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": true
+      },
+      {
+        "tracker_id": 38,
+        "waymo_track_id": 37,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 39,
+        "waymo_track_id": 38,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 40,
+        "waymo_track_id": 39,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 41,
+        "waymo_track_id": 40,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 42,
+        "waymo_track_id": 41,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 43,
+        "waymo_track_id": 42,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": true
+      },
+      {
+        "tracker_id": 44,
+        "waymo_track_id": 43,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": true
+      },
+      {
+        "tracker_id": 45,
+        "waymo_track_id": 44,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 46,
+        "waymo_track_id": 45,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 47,
+        "waymo_track_id": 46,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 48,
+        "waymo_track_id": 47,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 49,
+        "waymo_track_id": 48,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 50,
+        "waymo_track_id": 49,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 51,
+        "waymo_track_id": 50,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      },
+      {
+        "tracker_id": 52,
+        "waymo_track_id": 51,
+        "camera_predicted_class": "airplane",
+        "confirmed_moving": false
+      }
+    ]
+  },
+  "replay_population": {
+    "aircraft_in_adsb_input": 62,
+    "aircraft_selected_for_airport_replay": 41,
+    "aircraft_with_valid_rendered_poses": 39
+  }
+}
