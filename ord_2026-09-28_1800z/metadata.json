@@ -398,313 +398,521 @@
         "tracker_id": 1,
         "waymo_track_id": 0,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": true
+        "confirmed_moving": true,
+        "matched_actor_name": "ADSB_ac4e85",
+        "matched_icao24": "ac4e85",
+        "segmentation_match_count": 50,
+        "detection_count": 54
       },
       {
         "tracker_id": 2,
         "waymo_track_id": 1,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 3,
         "waymo_track_id": 2,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 4,
         "waymo_track_id": 3,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 5,
         "waymo_track_id": 4,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 2
       },
       {
         "tracker_id": 6,
         "waymo_track_id": 5,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 14
       },
       {
         "tracker_id": 7,
         "waymo_track_id": 6,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 50
       },
       {
         "tracker_id": 8,
         "waymo_track_id": 7,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": true
+        "confirmed_moving": true,
+        "matched_actor_name": "ADSB_ab5a1d",
+        "matched_icao24": "ab5a1d",
+        "segmentation_match_count": 67,
+        "detection_count": 71
       },
       {
         "tracker_id": 9,
         "waymo_track_id": 8,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 10
       },
       {
         "tracker_id": 10,
         "waymo_track_id": 9,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 2
       },
       {
         "tracker_id": 11,
         "waymo_track_id": 10,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 3
       },
       {
         "tracker_id": 12,
         "waymo_track_id": 11,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 13,
         "waymo_track_id": 12,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 14,
         "waymo_track_id": 13,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 15,
         "waymo_track_id": 14,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 16,
         "waymo_track_id": 15,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 17,
         "waymo_track_id": 16,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 18,
         "waymo_track_id": 17,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 173
       },
       {
         "tracker_id": 19,
         "waymo_track_id": 18,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": true
+        "confirmed_moving": true,
+        "matched_actor_name": "ADSB_accaf4",
+        "matched_icao24": "accaf4",
+        "segmentation_match_count": 94,
+        "detection_count": 102
       },
       {
         "tracker_id": 20,
         "waymo_track_id": 19,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 7
       },
       {
         "tracker_id": 21,
         "waymo_track_id": 20,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 6
       },
       {
         "tracker_id": 22,
         "waymo_track_id": 21,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": true
+        "confirmed_moving": true,
+        "matched_actor_name": "ADSB_ad83f3",
+        "matched_icao24": "ad83f3",
+        "segmentation_match_count": 104,
+        "detection_count": 109
       },
       {
         "tracker_id": 23,
         "waymo_track_id": 22,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 10
       },
       {
         "tracker_id": 24,
         "waymo_track_id": 23,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 8
       },
       {
         "tracker_id": 25,
         "waymo_track_id": 24,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 3
       },
       {
         "tracker_id": 26,
         "waymo_track_id": 25,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 27,
         "waymo_track_id": 26,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": true
+        "confirmed_moving": true,
+        "matched_actor_name": "ADSB_a2479f",
+        "matched_icao24": "a2479f",
+        "segmentation_match_count": 8,
+        "detection_count": 8
       },
       {
         "tracker_id": 28,
         "waymo_track_id": 27,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 10
       },
       {
         "tracker_id": 29,
         "waymo_track_id": 28,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 5
       },
       {
         "tracker_id": 30,
         "waymo_track_id": 29,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 8
       },
       {
         "tracker_id": 31,
         "waymo_track_id": 30,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 32,
         "waymo_track_id": 31,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": true
+        "confirmed_moving": true,
+        "matched_actor_name": "ADSB_a2479f",
+        "matched_icao24": "a2479f",
+        "segmentation_match_count": 11,
+        "detection_count": 12
       },
       {
         "tracker_id": 33,
         "waymo_track_id": 32,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": true
+        "confirmed_moving": true,
+        "matched_actor_name": "ADSB_a2479f",
+        "matched_icao24": "a2479f",
+        "segmentation_match_count": 36,
+        "detection_count": 36
       },
       {
         "tracker_id": 34,
         "waymo_track_id": 33,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 2
       },
       {
         "tracker_id": 35,
         "waymo_track_id": 34,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 5
       },
       {
         "tracker_id": 36,
         "waymo_track_id": 35,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 64
       },
       {
         "tracker_id": 37,
         "waymo_track_id": 36,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": true
+        "confirmed_moving": true,
+        "matched_actor_name": "ADSB_a61d00",
+        "matched_icao24": "a61d00",
+        "segmentation_match_count": 54,
+        "detection_count": 56
       },
       {
         "tracker_id": 38,
         "waymo_track_id": 37,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 57
       },
       {
         "tracker_id": 39,
         "waymo_track_id": 38,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 51
       },
       {
         "tracker_id": 40,
         "waymo_track_id": 39,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 56
       },
       {
         "tracker_id": 41,
         "waymo_track_id": 40,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 24
       },
       {
         "tracker_id": 42,
         "waymo_track_id": 41,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 2
       },
       {
         "tracker_id": 43,
         "waymo_track_id": 42,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": true
+        "confirmed_moving": true,
+        "matched_actor_name": "ADSB_a6898d",
+        "matched_icao24": "a6898d",
+        "segmentation_match_count": 67,
+        "detection_count": 70
       },
       {
         "tracker_id": 44,
         "waymo_track_id": 43,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": true
+        "confirmed_moving": true,
+        "matched_actor_name": "ADSB_aaa593",
+        "matched_icao24": "aaa593",
+        "segmentation_match_count": 39,
+        "detection_count": 41
       },
       {
         "tracker_id": 45,
         "waymo_track_id": 44,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 2
       },
       {
         "tracker_id": 46,
         "waymo_track_id": 45,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 4
       },
       {
         "tracker_id": 47,
         "waymo_track_id": 46,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 48,
         "waymo_track_id": 47,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 49,
         "waymo_track_id": 48,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 50,
         "waymo_track_id": 49,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 2
       },
       {
         "tracker_id": 51,
         "waymo_track_id": 50,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 1
       },
       {
         "tracker_id": 52,
         "waymo_track_id": 51,
         "camera_predicted_class": "airplane",
-        "confirmed_moving": false
+        "confirmed_moving": false,
+        "matched_actor_name": null,
+        "matched_icao24": null,
+        "segmentation_match_count": 0,
+        "detection_count": 2
       }
     ]
   },
@@ -712,5 +920,6 @@
     "aircraft_in_adsb_input": 62,
     "aircraft_selected_for_airport_replay": 41,
     "aircraft_with_valid_rendered_poses": 39
-  }
+  },
+  "camera_track_identity_method": "Post-hoc match between a tracked YOLO box and a spawned aircraft's paired segmentation mask. This identity was not used by the camera tracker. Null means no verified match, not proof that the detection was false."
 }
