@@ -24,7 +24,7 @@ python viewer/app.py --track ord_aircraft_2026-09-28_1800z_3hz/simulation_poses_
 
 To inspect a raw simulator recording before dataset export, pass its `states.jsonl` or its run folder. That folder must also contain `source_config.json`; `camera_pose_events.jsonl` supplies camera markers when present.
 
-The command prints a local URL and opens it in your browser. Use `--no-browser` to skip opening a tab. Stop the server with Ctrl+C. The server listens only on `127.0.0.1` and does not upload track data. Browser access to OpenStreetMap tiles and the pinned Leaflet map library requires an internet connection. Neither needs an API key.
+The command prints a local URL and opens it in your browser. Use `--no-browser` to skip opening a tab. Stop the server with Ctrl+C. The server listens only on `127.0.0.1` and does not upload track data. Browser access to OpenStreetMap tiles and the pinned Leaflet map library requires an internet connection.
 
 ## What the map shows
 

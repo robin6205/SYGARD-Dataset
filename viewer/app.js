@@ -11,6 +11,8 @@ function fmtElapsed(seconds) {
   return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, "0")}`;
 }
 
+function fmtCount(count, noun) { return `${count} ${noun}${count === 1 ? "" : "s"}`; }
+
 function fmtUtc(seconds) {
   if (!dataset.start_utc) return "UTC start unavailable";
   return new Date(Date.parse(dataset.start_utc) + seconds * 1000).toISOString().replace("T", " ").replace("Z", " UTC");
@@ -205,7 +207,7 @@ function draw() {
       if (!$("show-cameras").checked && map.hasLayer(part)) map.removeLayer(part);
     }
   }
-  $("active-count").textContent = `${activeReference} recorded objects · ${activeSensor} camera tracks at this time`;
+  $("active-count").textContent = `${fmtCount(activeReference, "recorded object")} · ${fmtCount(activeSensor, "camera track")} at this time`;
 }
 
 function seek(value) {
@@ -249,7 +251,7 @@ async function start() {
   if (!response.ok) throw new Error(`Dataset request failed: ${response.status}`);
   dataset = await response.json();
   assignColors();
-  $("dataset-name").textContent = `${dataset.title} · ${dataset.tracks.filter(t => t.kind === "sensor").length} camera tracks · ${dataset.tracks.filter(t => t.kind === "reference").length} simulation objects · ${dataset.cameras.length} cameras`;
+  $("dataset-name").textContent = `${dataset.title} · ${fmtCount(dataset.tracks.filter(t => t.kind === "sensor").length, "camera track")} · ${fmtCount(dataset.tracks.filter(t => t.kind === "reference").length, "simulation object")} · ${fmtCount(dataset.cameras.length, "camera")}`;
   $("time-slider").min = dataset.time_min;
   $("time-slider").max = dataset.time_max;
   $("time-start").textContent = fmtElapsed(dataset.time_min);

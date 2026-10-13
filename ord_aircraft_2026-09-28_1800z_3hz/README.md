@@ -2,6 +2,8 @@
 
 This folder covers September 28, 2026, 18:00–18:05 UTC. It contains 39 rendered aircraft objects, 3,422 active simulator pose reads, and 897 image times shared by three fixed 1280×720 cameras. The 3 Hz camera selection has 4 missing time slots; `sync_index.jsonl` lists the retained frames and the nearest actor readback for each one.
 
+The full trajectories are in `simulation_poses_native.jsonl` and `camera_tracks_native.jsonl` at their original readback and image timestamps. Aircraft poses were recorded at 3 Hz; camera frames were selected at 3 Hz. The camera tracks contain processed 3D tracker states, including Kalman predictions between detections. The two streams were not sampled at identical instants.
+
 ## Files
 
 Each JSONL file has one JSON object per line. The video used to inspect this run is supplied separately.
@@ -28,7 +30,7 @@ The native JSONL files preserve the measured timestamps and the full five-minute
 
 The two TFRecords have independent track IDs; join a track ID only through the corresponding section of `metadata.json`. The `Scenario` type is `TYPE_VEHICLE` because the protobuf enum has no aircraft or drone category. Object box dimensions, `map_features`, and `tracks_to_predict` are unset, and no self-driving-car track was assigned. The protobuf default for `sdc_track_index` must be ignored.
 
-In `metadata.json`, `track_ids.simulation_truth[].waymo_track_id` identifies a rendered object. `track_ids.camera_tracks[].waymo_track_id` identifies a camera track; its processing `tracker_id` is one greater. `matched_source_object_id` names the ADS-B aircraft or the synthetic drone when segmentation verified the match. It is null when no match was verified. Several camera track IDs can name the same object.
+In `metadata.json`, `track_ids.simulation_truth[].waymo_track_id` identifies a rendered object. `track_ids.camera_tracks[].waymo_track_id` identifies a camera track; its processing `tracker_id` is one greater. `matched_source_object_id` names the ADS-B aircraft when segmentation verified the match. It is null when no match was verified. Several camera track IDs can name the same object.
 
 ## How the tracks were made
 
