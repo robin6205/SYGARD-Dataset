@@ -7,3 +7,5 @@ Dataset instances are kept in separate folders.
 - [ORD drone, 3 Hz](ord_drone_2026-09-28_1800z_3hz/README.md): one synthetic drone route from east of the airport toward its center, with complete actor and camera tracks at their recorded timestamps.
 
 Each instance README describes its files, coordinates, and limits.
+
+To replay an instance on a map, see the [local track viewer](viewer/README.md). It accepts a dataset folder or a native JSONL file through `--track` and needs no map API key.
