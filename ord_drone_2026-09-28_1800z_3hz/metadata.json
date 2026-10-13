@@ -1,0 +1,557 @@
+{
+  "instance": "ord_drone_3hz",
+  "interval_utc": [
+    "2026-09-28T18:00:00Z",
+    "2026-09-28T18:05:00Z"
+  ],
+  "coordinate_frame": {
+    "axes": "local ENU, metres: x east, y north, z up",
+    "origin_wgs84": {
+      "latitude_deg": 41.980103,
+      "longitude_deg": -87.903868,
+      "altitude_m": 2250.0
+    },
+    "sim_clock_at_start_ns": 1010000000
+  },
+  "sampling": {
+    "nominal_rate_hz": 3,
+    "actor_readback_rows": 902,
+    "selected_three_camera_times": 897,
+    "missing_camera_time_slots": [
+      0,
+      1,
+      204,
+      448
+    ],
+    "mean_actor_read_interval_s": 0.3329966703662588,
+    "mean_selected_camera_interval_s": 0.3340290178571431,
+    "maximum_selected_camera_gap_s": 0.71,
+    "median_camera_grid_offset_ms": 60.0,
+    "median_nearest_actor_offset_ms": 85.0
+  },
+  "camera_intrinsics": {
+    "Camera1": {
+      "name": "Camera 1",
+      "width_px": 1280,
+      "height_px": 720,
+      "horizontal_fov_deg": 45.0,
+      "fx_px": 1545.0966799187809,
+      "fy_px": 1545.0966799187809,
+      "cx_px": 640.0,
+      "cy_px": 360.0
+    },
+    "Camera2": {
+      "name": "Camera 2",
+      "width_px": 1280,
+      "height_px": 720,
+      "horizontal_fov_deg": 45.0,
+      "fx_px": 1545.0966799187809,
+      "fy_px": 1545.0966799187809,
+      "cx_px": 640.0,
+      "cy_px": 360.0
+    },
+    "Camera_5f1324f5ce26": {
+      "name": "Camera 3",
+      "width_px": 1280,
+      "height_px": 720,
+      "horizontal_fov_deg": 45.0,
+      "fx_px": 1545.0966799187809,
+      "fy_px": 1545.0966799187809,
+      "cx_px": 640.0,
+      "cy_px": 360.0
+    }
+  },
+  "camera_detection_check": {
+    "Camera1": {
+      "verified_frames": 885,
+      "unverified_frames": 12,
+      "visible_aircraft_instances": 24,
+      "matched_aircraft_instances": 23,
+      "missed_aircraft_instances": 1,
+      "extra_detections": 1
+    },
+    "Camera2": {
+      "verified_frames": 883,
+      "unverified_frames": 14,
+      "visible_aircraft_instances": 66,
+      "matched_aircraft_instances": 60,
+      "missed_aircraft_instances": 6,
+      "extra_detections": 2492
+    },
+    "Camera_5f1324f5ce26": {
+      "verified_frames": 880,
+      "unverified_frames": 17,
+      "visible_aircraft_instances": 16,
+      "matched_aircraft_instances": 16,
+      "missed_aircraft_instances": 0,
+      "extra_detections": 0
+    }
+  },
+  "track_ids": {
+    "simulation_truth": [
+      {
+        "waymo_track_id": 0,
+        "actor_name": "ADSB_nonicao_drone01",
+        "source_object_id": "drone01",
+        "vehicle_type": "drone",
+        "adsb_reported_type": null,
+        "rendered_model": "kraken"
+      }
+    ],
+    "camera_tracks": [
+      {
+        "waymo_track_id": 0,
+        "tracker_id": 1,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 882,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 1,
+        "tracker_id": 2,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 885,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 2,
+        "tracker_id": 3,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 551,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 3,
+        "tracker_id": 4,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 30,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 4,
+        "tracker_id": 5,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 1,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 5,
+        "tracker_id": 6,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 1,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 6,
+        "tracker_id": 7,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 21,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 7,
+        "tracker_id": 8,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 1,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 8,
+        "tracker_id": 9,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 1,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 9,
+        "tracker_id": 10,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 7,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 10,
+        "tracker_id": 11,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 76,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 11,
+        "tracker_id": 12,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 2,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 12,
+        "tracker_id": 13,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 2,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 13,
+        "tracker_id": 14,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 1,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 14,
+        "tracker_id": 15,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 3,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 15,
+        "tracker_id": 16,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 2,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 16,
+        "tracker_id": 17,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 1,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 17,
+        "tracker_id": 18,
+        "detector_class": "airplane",
+        "matched_actor_name": "ADSB_nonicao_drone01",
+        "matched_source_object_id": "drone01",
+        "segmentation_match_count": 23,
+        "segmentation_votes": {
+          "ADSB_nonicao_drone01": 23
+        },
+        "detection_count": 24,
+        "confirmed_moving": true
+      },
+      {
+        "waymo_track_id": 18,
+        "tracker_id": 19,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 12,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 19,
+        "tracker_id": 20,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 23,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 20,
+        "tracker_id": 21,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 1,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 21,
+        "tracker_id": 22,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 1,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 22,
+        "tracker_id": 23,
+        "detector_class": "airplane",
+        "matched_actor_name": "ADSB_nonicao_drone01",
+        "matched_source_object_id": "drone01",
+        "segmentation_match_count": 16,
+        "segmentation_votes": {
+          "ADSB_nonicao_drone01": 16
+        },
+        "detection_count": 16,
+        "confirmed_moving": true
+      },
+      {
+        "waymo_track_id": 23,
+        "tracker_id": 24,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 1,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 24,
+        "tracker_id": 25,
+        "detector_class": "airplane",
+        "matched_actor_name": "ADSB_nonicao_drone01",
+        "matched_source_object_id": "drone01",
+        "segmentation_match_count": 59,
+        "segmentation_votes": {
+          "ADSB_nonicao_drone01": 59
+        },
+        "detection_count": 63,
+        "confirmed_moving": true
+      },
+      {
+        "waymo_track_id": 25,
+        "tracker_id": 26,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 2,
+        "confirmed_moving": false
+      },
+      {
+        "waymo_track_id": 26,
+        "tracker_id": 27,
+        "detector_class": "airplane",
+        "matched_actor_name": null,
+        "matched_source_object_id": null,
+        "segmentation_match_count": 0,
+        "segmentation_votes": {},
+        "detection_count": 25,
+        "confirmed_moving": false
+      }
+    ]
+  },
+  "camera_track_identity_method": "After tracking, a YOLO box must match one rendered object segmentation mask in at least two frames. Null means no verified match.",
+  "input_source": {
+    "name": "Prescribed Kraken drone route",
+    "description": "Synthetic trajectory from east of ORD toward the airport center; not ADS-B or flight-dynamics output."
+  },
+  "drone_route_source": "Synthetic prescribed waypoints, not ADS-B or flight dynamics",
+  "detector": {
+    "model": "YOLO11s COCO",
+    "class": "airplane",
+    "model_sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+    "confidence_threshold": 0.15,
+    "inference_size_px": 960
+  },
+  "depth_noise": {
+    "gaussian_sigma_m": 1.0,
+    "seed": 20261005
+  },
+  "kalman_filter": {
+    "model": "constant velocity",
+    "measurement_sigma_m": 6.0,
+    "acceleration_sigma_mps2": 6.0,
+    "maximum_unseen_s": 5.0
+  },
+  "waymo_scenarios": {
+    "reference": [
+      {
+        "id": "ord_20260928_1800z_3hz_reference_00",
+        "start_elapsed_s": 0.0,
+        "end_elapsed_s": 30.0,
+        "tracks": 1
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_reference_01",
+        "start_elapsed_s": 30.0,
+        "end_elapsed_s": 60.0,
+        "tracks": 1
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_reference_02",
+        "start_elapsed_s": 60.0,
+        "end_elapsed_s": 90.0,
+        "tracks": 1
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_reference_03",
+        "start_elapsed_s": 90.0,
+        "end_elapsed_s": 120.0,
+        "tracks": 1
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_reference_04",
+        "start_elapsed_s": 120.0,
+        "end_elapsed_s": 150.0,
+        "tracks": 1
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_reference_05",
+        "start_elapsed_s": 150.0,
+        "end_elapsed_s": 180.0,
+        "tracks": 1
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_reference_06",
+        "start_elapsed_s": 180.0,
+        "end_elapsed_s": 210.0,
+        "tracks": 1
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_reference_07",
+        "start_elapsed_s": 210.0,
+        "end_elapsed_s": 240.0,
+        "tracks": 1
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_reference_08",
+        "start_elapsed_s": 240.0,
+        "end_elapsed_s": 270.0,
+        "tracks": 1
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_reference_09",
+        "start_elapsed_s": 270.0,
+        "end_elapsed_s": 300.0,
+        "tracks": 1
+      }
+    ],
+    "sensed": [
+      {
+        "id": "ord_20260928_1800z_3hz_sensed_00",
+        "start_elapsed_s": 0.0,
+        "end_elapsed_s": 30.0,
+        "tracks": 6
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_sensed_01",
+        "start_elapsed_s": 30.0,
+        "end_elapsed_s": 60.0,
+        "tracks": 6
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_sensed_02",
+        "start_elapsed_s": 60.0,
+        "end_elapsed_s": 90.0,
+        "tracks": 8
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_sensed_03",
+        "start_elapsed_s": 90.0,
+        "end_elapsed_s": 120.0,
+        "tracks": 6
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_sensed_04",
+        "start_elapsed_s": 120.0,
+        "end_elapsed_s": 150.0,
+        "tracks": 7
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_sensed_05",
+        "start_elapsed_s": 150.0,
+        "end_elapsed_s": 180.0,
+        "tracks": 8
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_sensed_06",
+        "start_elapsed_s": 180.0,
+        "end_elapsed_s": 210.0,
+        "tracks": 7
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_sensed_07",
+        "start_elapsed_s": 210.0,
+        "end_elapsed_s": 240.0,
+        "tracks": 6
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_sensed_08",
+        "start_elapsed_s": 240.0,
+        "end_elapsed_s": 270.0,
+        "tracks": 7
+      },
+      {
+        "id": "ord_20260928_1800z_3hz_sensed_09",
+        "start_elapsed_s": 270.0,
+        "end_elapsed_s": 300.0,
+        "tracks": 5
+      }
+    ]
+  },
+  "waymo_record": "91 nominal 3 Hz times per Scenario, with adjacent 30-second windows sharing one time; empty windows omitted"
+}
