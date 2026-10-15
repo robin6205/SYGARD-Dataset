@@ -1,0 +1,285 @@
+{
+  "schema_version": 2,
+  "instance": "scenario_000097_aircraft",
+  "dataset_kind": "route_trajectories_without_rendering",
+  "start_utc_s": 1790594400.0,
+  "duration_s": 300,
+  "interval_utc": [
+    "2026-09-28T11:20:00+00:00",
+    "2026-09-28T11:25:00+00:00"
+  ],
+  "coordinate_frame": {
+    "axes": "local ENU, metres: x east, y north, z up",
+    "origin_wgs84": {
+      "latitude_deg": 41.980103,
+      "longitude_deg": -87.903868,
+      "altitude_m": 2250.0
+    }
+  },
+  "sampling": {
+    "reference_rate_hz": 3,
+    "grid_timestamps": 901,
+    "source_observations": "Original route observations and timestamps; no resampling",
+    "full_interval": true,
+    "window_segmentation": false,
+    "nominal_rate_hz": 3
+  },
+  "generation": {
+    "position_source": "Calculated from the supplied routes; not Unreal actor readbacks",
+    "interpolation": "Linear latitude, longitude and altitude using the replay trajectory code",
+    "max_interpolation_gap_s": 30,
+    "bounds": {
+      "south": 41.94,
+      "north": 42.015,
+      "west": -87.95,
+      "east": -87.845
+    },
+    "missing_altitude_fallback_m": 166.8,
+    "terrain_queries_performed": false,
+    "unreal_used": false,
+    "cameras_used": false,
+    "heading": "Toward next route waypoint, with reported heading as fallback",
+    "velocity": "Backward difference of adjacent 3 Hz positions; null at starts and gaps"
+  },
+  "selection": {
+    "rules": {
+      "area": "ORD airport bounds",
+      "min_airborne_duration_s": 25,
+      "min_speed_mps": 30,
+      "min_traveled_m": 1200,
+      "min_displacement_m": 800,
+      "min_source_observations": 4,
+      "min_height_above_reference_ground_m": 25,
+      "max_height_above_reference_ground_m": 1100,
+      "reference_ground_altitude_m": 166,
+      "max_source_download_failure_fraction": 0.1
+    },
+    "qualifying_aircraft": 8,
+    "categories": "Altitude trend only: climbing, descending or level; not verified takeoff/landing labels",
+    "events": [
+      {
+        "icao24": "a0b826",
+        "vehicle_type": "aircraft",
+        "category": "climbing",
+        "start_s": 189,
+        "end_s": 234,
+        "duration_s": 45,
+        "traveled_m": 3751,
+        "displacement_m": 3750,
+        "source_observations": 46,
+        "altitude_change_m": 480
+      },
+      {
+        "icao24": "a0b86c",
+        "vehicle_type": "aircraft",
+        "category": "climbing",
+        "start_s": 37,
+        "end_s": 67,
+        "duration_s": 30,
+        "traveled_m": 2559,
+        "displacement_m": 2558,
+        "source_observations": 31,
+        "altitude_change_m": 343
+      },
+      {
+        "icao24": "a0f355",
+        "vehicle_type": "aircraft",
+        "category": "descending",
+        "start_s": 59,
+        "end_s": 108,
+        "duration_s": 49,
+        "traveled_m": 3493,
+        "displacement_m": 3492,
+        "source_observations": 86,
+        "altitude_change_m": -180
+      },
+      {
+        "icao24": "a34e6a",
+        "vehicle_type": "aircraft",
+        "category": "descending",
+        "start_s": 0,
+        "end_s": 55,
+        "duration_s": 55,
+        "traveled_m": 4011,
+        "displacement_m": 4009,
+        "source_observations": 87,
+        "altitude_change_m": -212
+      },
+      {
+        "icao24": "a52c4f",
+        "vehicle_type": "aircraft",
+        "category": "descending",
+        "start_s": 243,
+        "end_s": 294,
+        "duration_s": 51,
+        "traveled_m": 3680,
+        "displacement_m": 3680,
+        "source_observations": 92,
+        "altitude_change_m": -192
+      },
+      {
+        "icao24": "a54ee1",
+        "vehicle_type": "aircraft",
+        "category": "climbing",
+        "start_s": 57,
+        "end_s": 85,
+        "duration_s": 28,
+        "traveled_m": 2250,
+        "displacement_m": 2176,
+        "source_observations": 30,
+        "altitude_change_m": 336
+      },
+      {
+        "icao24": "a97626",
+        "vehicle_type": "aircraft",
+        "category": "descending",
+        "start_s": 77,
+        "end_s": 134,
+        "duration_s": 57,
+        "traveled_m": 4340,
+        "displacement_m": 4340,
+        "source_observations": 90,
+        "altitude_change_m": -224
+      },
+      {
+        "icao24": "aa5694",
+        "vehicle_type": "aircraft",
+        "category": "climbing",
+        "start_s": 147,
+        "end_s": 184,
+        "duration_s": 37,
+        "traveled_m": 3259,
+        "displacement_m": 3137,
+        "source_observations": 39,
+        "altitude_change_m": 378
+      }
+    ]
+  },
+  "source_input": {
+    "filename": "ord_2026-09-28_1120Z_5min.json",
+    "sha256": "a027920a86211314ca9a155939203828de8a37a5da9cf2d63864199fc98e7273",
+    "archive": {
+      "name": "ADSB.lol/readsb",
+      "license": "ODbL-1.0",
+      "index_url": "https://adsb.lol/globe_history/2026/09/28/heatmap/22.bin.ttf",
+      "index_sha256": "de42a4b3d9aadf81560faaed6d814bc7523ca27fe75cc6acb68d5b208fd6e2fa",
+      "candidate_aircraft": 94,
+      "download_errors": []
+    }
+  },
+  "implementation_sha256": {
+    "export_route_bag.py": "883f9060d7303ed95d116cf38e48878c4cba705cdf352c2bf51a1fa6c230f68e",
+    "trajectory.py": "24f73719d46414d31ac03603880ce9266d55b3bfccc2a66038c4d4940720ab61"
+  },
+  "counts": {
+    "reference_track_rows": 2460,
+    "source_observation_rows": 1135,
+    "objects_with_tracks": 8,
+    "source_objects": 8
+  },
+  "validation": {
+    "passed": true,
+    "reference_track_rows": 2460,
+    "source_observation_rows": 1135,
+    "objects_with_tracks": 8,
+    "checks": [
+      "complete_available_tracks",
+      "unique_object_timestamps",
+      "3_hz_timestamps",
+      "source_interpolation",
+      "enu_coordinates",
+      "unit_quaternions",
+      "finite_numbers",
+      "metadata_counts",
+      "object_metadata_join",
+      "velocity_and_heading",
+      "documented_file_layout",
+      "original_observations_preserved"
+    ]
+  },
+  "timing_seconds": {
+    "read_validate_and_calculate": 0.05888250000134576,
+    "write_files": 0.0665403999882983,
+    "validate_written_files": 0.11010690001421608
+  },
+  "files": {
+    "reference_tracks": "reference_tracks_3hz.jsonl",
+    "source_observations": "adsb_observations.jsonl"
+  },
+  "track_ids": {
+    "reference_tracks": [
+      {
+        "vehicle_type": "aircraft",
+        "registration": "N14539",
+        "adsb_reported_type": "A21N",
+        "trajectory_source": "adsb_route",
+        "source_observations": 151,
+        "reference_samples": 479,
+        "source_object_id": "a0b826"
+      },
+      {
+        "vehicle_type": "aircraft",
+        "registration": "N14559",
+        "adsb_reported_type": "A21N",
+        "trajectory_source": "adsb_route",
+        "source_observations": 167,
+        "reference_samples": 204,
+        "source_object_id": "a0b86c"
+      },
+      {
+        "vehicle_type": "aircraft",
+        "registration": "N160SY",
+        "adsb_reported_type": "E75L",
+        "trajectory_source": "adsb_route",
+        "source_observations": 145,
+        "reference_samples": 487,
+        "source_object_id": "a0f355"
+      },
+      {
+        "vehicle_type": "aircraft",
+        "registration": "N312BT",
+        "adsb_reported_type": "E75L",
+        "trajectory_source": "adsb_route",
+        "source_observations": 104,
+        "reference_samples": 201,
+        "source_object_id": "a34e6a"
+      },
+      {
+        "vehicle_type": "aircraft",
+        "registration": "N432UA",
+        "adsb_reported_type": "A320",
+        "trajectory_source": "adsb_route",
+        "source_observations": 167,
+        "reference_samples": 172,
+        "source_object_id": "a52c4f"
+      },
+      {
+        "vehicle_type": "aircraft",
+        "registration": "N441FR",
+        "adsb_reported_type": null,
+        "trajectory_source": "adsb_route",
+        "source_observations": 155,
+        "reference_samples": 256,
+        "source_object_id": "a54ee1"
+      },
+      {
+        "vehicle_type": "aircraft",
+        "registration": "N709BR",
+        "adsb_reported_type": "CRJ2",
+        "trajectory_source": "adsb_route",
+        "source_observations": 119,
+        "reference_samples": 207,
+        "source_object_id": "a97626"
+      },
+      {
+        "vehicle_type": "aircraft",
+        "registration": "N76508",
+        "adsb_reported_type": "B738",
+        "trajectory_source": "adsb_route",
+        "source_observations": 127,
+        "reference_samples": 454,
+        "source_object_id": "aa5694"
+      }
+    ]
+  }
+}

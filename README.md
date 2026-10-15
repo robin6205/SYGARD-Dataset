@@ -1,10 +1,12 @@
 # SYGARD Dataset
 
-Each folder contains one ORD simulation run.
+This repository contains ORD aircraft and drone trajectory datasets.
 
 - [Initial ORD aircraft run](ord_2026-09-28_1800z/README.md): the earlier five-minute, three-camera aircraft dataset.
 - [ORD aircraft, 3 Hz](ord_aircraft_2026-09-28_1800z_3hz/README.md): five minutes of aircraft traffic replayed from historical ADS-B routes.
 - [ORD drone, 3 Hz](ord_drone_2026-09-28_1800z_3hz/README.md): one drone flying from east of ORD toward the airport center.
+
+- [ORD aircraft training set, 800 scenarios](ord_aircraft_training_800_3hz/README.md): full five-minute trajectories calculated from ADS-B routes at 3 Hz, with the original observations at their recorded timestamps.
 
 ## New 3 Hz runs
 
