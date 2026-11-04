@@ -1,0 +1,277 @@
+{
+  "schema_version": 2,
+  "instance": "scenario_000071",
+  "dataset_kind": "adsb_aircraft_and_prescribed_drones",
+  "files": {
+    "reference_tracks": "reference_tracks_3hz.jsonl",
+    "noisy_tracks": "noisy_tracks_3hz.jsonl",
+    "source_observations": "adsb_observations.jsonl",
+    "drone_waypoints": "drone_waypoints.jsonl"
+  },
+  "start_utc_s": 1791741000.0,
+  "duration_s": 300,
+  "interval_utc": [
+    "2026-10-11T17:50:00+00:00",
+    "2026-10-11T17:55:00+00:00"
+  ],
+  "coordinate_frame": {
+    "axes": "local ENU, metres: x east, y north, z up",
+    "origin_wgs84": {
+      "latitude_deg": 41.980103,
+      "longitude_deg": -87.903868,
+      "altitude_m": 2250.0
+    }
+  },
+  "sampling": {
+    "nominal_rate_hz": 3,
+    "reference_rate_hz": 3,
+    "grid_timestamps": 901,
+    "source_observations": "Original route observations and timestamps; no resampling",
+    "full_interval": true,
+    "window_segmentation": false
+  },
+  "generation": {
+    "position_source": "Calculated from the supplied routes; not Unreal actor readbacks",
+    "interpolation": "Aircraft: linear latitude, longitude and altitude using the replay trajectory code; drone: prescribed kinematic path",
+    "max_interpolation_gap_s": 30,
+    "bounds": {
+      "south": 41.94,
+      "north": 42.015,
+      "west": -87.95,
+      "east": -87.845
+    },
+    "missing_altitude_fallback_m": 166.8,
+    "terrain_queries_performed": false,
+    "unreal_used": false,
+    "cameras_used": false,
+    "heading": "Toward next route waypoint, with reported heading as fallback",
+    "velocity": "Backward difference of adjacent 3 Hz positions; null at starts and gaps",
+    "drone_position_source": "Prescribed kinematic route sampled at 3 Hz",
+    "bounds_scope": "The bounds apply to aircraft route selection; drone paths can enter from outside them."
+  },
+  "selection": {
+    "rules": {
+      "area": "ORD airport bounds",
+      "min_airborne_duration_s": 25,
+      "min_speed_mps": 30,
+      "min_traveled_m": 1200,
+      "min_displacement_m": 800,
+      "min_source_observations": 4,
+      "min_height_above_reference_ground_m": 25,
+      "max_height_above_reference_ground_m": 1100,
+      "reference_ground_altitude_m": 166,
+      "max_source_download_failure_fraction": 0.1
+    },
+    "qualifying_aircraft": 3,
+    "categories": "Altitude trend only: climbing, descending or level; not verified takeoff/landing labels",
+    "events": [
+      {
+        "icao24": "aa763f",
+        "vehicle_type": "aircraft",
+        "category": "climbing",
+        "start_s": 73,
+        "end_s": 102,
+        "duration_s": 29,
+        "traveled_m": 2414,
+        "displacement_m": 2343,
+        "source_observations": 30,
+        "altitude_change_m": 381
+      },
+      {
+        "icao24": "aacfe9",
+        "vehicle_type": "aircraft",
+        "category": "climbing",
+        "start_s": 217,
+        "end_s": 249,
+        "duration_s": 32,
+        "traveled_m": 2678,
+        "displacement_m": 2578,
+        "source_observations": 33,
+        "altitude_change_m": 374
+      },
+      {
+        "icao24": "ac0543",
+        "vehicle_type": "aircraft",
+        "category": "climbing",
+        "start_s": 172,
+        "end_s": 205,
+        "duration_s": 33,
+        "traveled_m": 2580,
+        "displacement_m": 2554,
+        "source_observations": 35,
+        "altitude_change_m": 398
+      }
+    ]
+  },
+  "source_input": {
+    "filename": "ord_2026-10-11_1750Z_5min.json",
+    "sha256": "63c22d2685b5539a1a0af59954d2c8e30acba8f98f8813279a088640b48320ec",
+    "archive": {
+      "name": "ADSB.lol/readsb",
+      "license": "ODbL-1.0",
+      "index_url": "https://adsb.lol/globe_history/2026/10/11/heatmap/35.bin.ttf",
+      "index_sha256": "3ee8ac20995ddf91c00cdbc2bdf64c48b446a8ab472453ad8834a8cce117b494",
+      "candidate_aircraft": 175,
+      "download_errors": []
+    }
+  },
+  "track_ids": {
+    "reference_tracks": [
+      {
+        "source_object_id": "aa763f",
+        "vehicle_type": "aircraft",
+        "registration": "N773XF",
+        "adsb_reported_type": "A319",
+        "trajectory_source": "adsb_route",
+        "source_observations": 171,
+        "reference_samples": 91
+      },
+      {
+        "source_object_id": "aacfe9",
+        "vehicle_type": "aircraft",
+        "registration": "N796SK",
+        "adsb_reported_type": "CRJ7",
+        "trajectory_source": "adsb_route",
+        "source_observations": 111,
+        "reference_samples": 127
+      },
+      {
+        "source_object_id": "ac0543",
+        "vehicle_type": "aircraft",
+        "registration": "N874AS",
+        "adsb_reported_type": "CRJ2",
+        "trajectory_source": "adsb_route",
+        "source_observations": 116,
+        "reference_samples": 104
+      },
+      {
+        "source_object_id": "~drone01",
+        "vehicle_type": "drone",
+        "adsb_reported_type": null,
+        "trajectory_source": "prescribed_drone_route",
+        "phases": [
+          {
+            "behavior": "crossing",
+            "start_s": 26,
+            "end_s": 86
+          }
+        ],
+        "reference_samples": 181,
+        "anomaly_intervals": [
+          {
+            "label": "drone_present",
+            "start_s": 26.0,
+            "end_s": 86.0
+          }
+        ]
+      }
+    ]
+  },
+  "counts": {
+    "reference_track_rows": 503,
+    "source_observation_rows": 398,
+    "objects_with_tracks": 4,
+    "source_objects": 3,
+    "noisy_track_rows": 503,
+    "drone_waypoint_rows": 181,
+    "drone_count": 1,
+    "aircraft_count": 3
+  },
+  "drone_scenario": {
+    "family": "crossing",
+    "variant": 2,
+    "route_seed": 2,
+    "drone_count": 1,
+    "anomaly_definition": "drone present",
+    "tower": null,
+    "nominal_ground_altitude_m": 166.8
+  },
+  "aircraft_source_validation": {
+    "passed": true,
+    "reference_track_rows": 322,
+    "source_observation_rows": 398,
+    "objects_with_tracks": 3,
+    "checks": [
+      "complete_available_tracks",
+      "unique_object_timestamps",
+      "3_hz_timestamps",
+      "source_interpolation",
+      "enu_coordinates",
+      "unit_quaternions",
+      "finite_numbers",
+      "metadata_counts",
+      "object_metadata_join",
+      "velocity_and_heading",
+      "documented_file_layout",
+      "original_observations_preserved"
+    ]
+  },
+  "aircraft_source_timing_seconds": {
+    "read_validate_and_calculate": 0.01737289992161095,
+    "write_files": 0.15511230006814003,
+    "validate_written_files": 0.05602100002579391
+  },
+  "aircraft_source_implementation_sha256": {
+    "export_route_bag.py": "ebe89584aaeaaa3a9b0296b76610e58dd3c7a5f07948f230058e371c25586dd0",
+    "trajectory.py": "24f73719d46414d31ac03603880ce9266d55b3bfccc2a66038c4d4940720ab61"
+  },
+  "mixed_generator_sha256": "0ce76fb6619ecafd33b59b1b73fd6217b4e6cf55b4e3f60daa4d4bbad0b3254e",
+  "implementation_sha256": {
+    "export_route_bag.py": "ebe89584aaeaaa3a9b0296b76610e58dd3c7a5f07948f230058e371c25586dd0",
+    "trajectory.py": "24f73719d46414d31ac03603880ce9266d55b3bfccc2a66038c4d4940720ab61",
+    "generate_mixed_routes.py": "0ce76fb6619ecafd33b59b1b73fd6217b4e6cf55b4e3f60daa4d4bbad0b3254e"
+  },
+  "noisy_tracks": {
+    "description": "Reference positions plus independent Gaussian noise; no tracker was run",
+    "axes": "east north up",
+    "standard_deviation_m": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "variance_m2": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "generator": "numpy default_rng / PCG64",
+    "numpy_version": "2.5.2",
+    "root_seed": 20261103,
+    "per_object_seed": "first 8 bytes of SHA-256 of root_seed:scenario_number:source_object_id, big-endian",
+    "identity": "source identity retained; no missed detections or false tracks"
+  },
+  "mixed_validation": {
+    "passed": true,
+    "reference_rows": 503,
+    "noisy_rows": 503,
+    "drone_rows": 181,
+    "drone_count": 1,
+    "noise_mean_enu_m": [
+      0.023596322588119886,
+      -0.07316846643637308,
+      0.030993823619477893
+    ],
+    "noise_std_enu_m": [
+      0.9501781945425083,
+      0.9679233592430851,
+      1.0137635567601777
+    ]
+  },
+  "validation": {
+    "passed": true,
+    "reference_rows": 503,
+    "noisy_rows": 503,
+    "drone_rows": 181,
+    "drone_count": 1,
+    "noise_mean_enu_m": [
+      0.023596322588119886,
+      -0.07316846643637308,
+      0.030993823619477893
+    ],
+    "noise_std_enu_m": [
+      0.9501781945425083,
+      0.9679233592430851,
+      1.0137635567601777
+    ]
+  }
+}
