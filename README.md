@@ -7,6 +7,7 @@ This repository contains ORD aircraft and drone trajectory datasets.
 - [ORD drone, 3 Hz](ord_drone_2026-09-28_1800z_3hz/README.md): one drone flying from east of ORD toward the airport center.
 
 - [ORD aircraft training set, 800 scenarios](ord_aircraft_training_800_3hz/README.md): full five-minute trajectories calculated from ADS-B routes at 3 Hz, with the original observations at their recorded timestamps.
+- [ORD Control Tower 910 surveillance problem](ord_tower_surveillance_s1/README.md): one attacker start and target beside the tower, four rotating rooftop cameras and their schedule, buildings in ENU, for adversarial path planning.
 
 ## New 3 Hz runs
 
