@@ -1,0 +1,796 @@
+{
+  "description": "ORD runway-crossing surveillance problem: one attacker flies 10 m above ground from south-east of the south runways, across them, then through the concourses to the apron beside Concourse B, while rotating cameras on roofs and poles watch. t = 0 is the attacker launch.",
+  "coordinate_frame": {
+    "axes": "east north up metres",
+    "origin_wgs84": {
+      "latitude_deg": 41.980103,
+      "longitude_deg": -87.903868,
+      "altitude_m": 2250.0
+    },
+    "assumed_ground_altitude_m": 166.8,
+    "ground_z_enu_m": -2083.2
+  },
+  "planning_area_enu_m": [
+    [
+      -500.0701002105829,
+      -2231.505690291793
+    ],
+    [
+      1405.4993185549986,
+      -2231.505690291793
+    ],
+    [
+      1405.4993185549986,
+      90.18111725598493
+    ],
+    [
+      -500.0701002105829,
+      90.18111725598493
+    ]
+  ],
+  "tower_centroid_enu_m": [
+    49.929899789417085,
+    -459.81888274401507
+  ],
+  "attacker": {
+    "speed_mps": 15.0,
+    "flight_height_above_ground_m": 10.0,
+    "flight_z_enu_m": -2073.2,
+    "vehicle_radius_m": 2.0,
+    "flight_height_note": "Constant. Below every roof except 11 low building(s) (osm_way_1026300050, osm_way_1026730908, osm_way_1026822884, osm_way_1511154367, osm_way_1511154368, osm_way_163490959, osm_way_163500132, osm_way_674743946, osm_way_681119431, osm_way_863162817, osm_way_863162818), which the attacker can fly over. Every building taller than 10 m is an obstacle."
+  },
+  "surveillance_schedule": {
+    "type": "rotating",
+    "time_zero": "attacker launch",
+    "all_cameras_same_period": true,
+    "period_s": 30.0,
+    "fields": {
+      "initial_heading_deg": "where the camera looks at t = 0, degrees clockwise from north",
+      "direction": "clockwise or counterclockwise",
+      "yaw_rate_deg_per_s": "turn speed",
+      "movement": "'full_turn' (keeps turning) or 'back_and_forth' (sweeps arc_deg centred on arc_centre_deg)",
+      "arc_deg": "how far the camera turns"
+    },
+    "sampled_file": "camera_schedule_10hz.jsonl",
+    "sample_rate_hz": 10,
+    "sampled_horizon_s": 300,
+    "note": "The formula in each camera schedule holds for any t; the sampled file is a convenience copy.",
+    "fields_in_sampled_file": {
+      "view_polygon_enu_m": "full 60 deg x 150 m view ignoring buildings",
+      "visible_area_enu_m": "part of that view the camera actually sees at flight height (MultiPolygon coordinates, GeoJSON nesting)"
+    }
+  },
+  "camera_height_above_ground_m": 14.0,
+  "cameras": [
+    {
+      "id": "camera_01",
+      "placement_order": 1,
+      "placement_rule": "runway_crossing",
+      "candidate_site_id": "pole_425_-1307",
+      "mount": "pole",
+      "building_id": null,
+      "building_name": null,
+      "mount_height_above_roof_m": null,
+      "pole_height_m": 14.0,
+      "position_enu_m": [
+        424.9298997894171,
+        -1306.5056902917931,
+        -2069.2
+      ],
+      "rotates": true,
+      "heading_definition": "degrees clockwise from north",
+      "horizontal_fov_deg": 60.0,
+      "effective_range_m": 150.0,
+      "view_polygon_at_t0_enu_m": [
+        [
+          424.9298997894171,
+          -1306.5056902917931
+        ],
+        [
+          318.863882611435,
+          -1200.439673113811
+        ],
+        [
+          328.5117583364362,
+          -1191.5990238239465
+        ],
+        [
+          338.89343433676015,
+          -1183.6328836484445
+        ],
+        [
+          349.92989978941705,
+          -1176.6018797241275
+        ],
+        [
+          361.5371605283122,
+          -1170.5595222362956
+        ],
+        [
+          373.6268782905668,
+          -1165.5517971739068
+        ],
+        [
+          386.107043024039,
+          -1161.6168163484328
+        ],
+        [
+          398.8826731393776,
+          -1158.7845273399619
+        ],
+        [
+          411.85653837726835,
+          -1157.0764855780312
+        ],
+        [
+          424.92989978941705,
+          -1156.5056902917931
+        ],
+        [
+          438.0032612015658,
+          -1157.0764855780312
+        ],
+        [
+          450.9771264394566,
+          -1158.7845273399619
+        ],
+        [
+          463.75275655479516,
+          -1161.6168163484328
+        ]
+      ],
+      "intrinsics": {
+        "image_width_px": 1920,
+        "image_height_px": 1080,
+        "fx_px": 1662.7687752661222,
+        "fy_px": 1662.7687752661222,
+        "cx_px": 960.0,
+        "cy_px": 540.0,
+        "horizontal_fov_deg": 60.0,
+        "vertical_fov_deg": 35.98339777135764,
+        "distortion_model": "none"
+      },
+      "extrinsics_fixed": {
+        "frame": "local east north up",
+        "pitch_deg": -15.0,
+        "roll_deg": 0,
+        "camera_axes": [
+          "right",
+          "down",
+          "forward"
+        ]
+      },
+      "schedule": {
+        "initial_heading_deg": 345,
+        "direction": "clockwise",
+        "yaw_rate_deg_per_s": 12.0,
+        "movement": "full_turn",
+        "arc_deg": 360.0,
+        "arc_centre_deg": null,
+        "period_s": 30.0,
+        "heading_formula": "(initial_heading_deg + yaw_rate_deg_per_s * t) % 360  (clockwise, t in s)"
+      },
+      "nearest_runway_centreline_m": 78.3,
+      "nearest_taxiway_centreline_m": 105.2,
+      "blind_area_file": "camera_blind_areas_enu.json"
+    },
+    {
+      "id": "camera_02",
+      "placement_order": 2,
+      "placement_rule": "runway_crossing",
+      "candidate_site_id": "pole_775_-1507",
+      "mount": "pole",
+      "building_id": null,
+      "building_name": null,
+      "mount_height_above_roof_m": null,
+      "pole_height_m": 14.0,
+      "position_enu_m": [
+        774.929899789417,
+        -1506.5056902917931,
+        -2069.2
+      ],
+      "rotates": true,
+      "heading_definition": "degrees clockwise from north",
+      "horizontal_fov_deg": 60.0,
+      "effective_range_m": 150.0,
+      "view_polygon_at_t0_enu_m": [
+        [
+          774.929899789417,
+          -1506.5056902917931
+        ],
+        [
+          849.929899789417,
+          -1636.409500859459
+        ],
+        [
+          838.322639050522,
+          -1642.4518583472907
+        ],
+        [
+          826.2329212882673,
+          -1647.4595834096795
+        ],
+        [
+          813.7527565547952,
+          -1651.3945642351534
+        ],
+        [
+          800.9771264394566,
+          -1654.2268532436244
+        ],
+        [
+          788.0032612015658,
+          -1655.934895005555
+        ],
+        [
+          774.929899789417,
+          -1656.5056902917931
+        ],
+        [
+          761.8565383772684,
+          -1655.934895005555
+        ],
+        [
+          748.8826731393775,
+          -1654.2268532436244
+        ],
+        [
+          736.107043024039,
+          -1651.3945642351534
+        ],
+        [
+          723.6268782905668,
+          -1647.4595834096795
+        ],
+        [
+          711.5371605283121,
+          -1642.4518583472907
+        ],
+        [
+          699.929899789417,
+          -1636.409500859459
+        ]
+      ],
+      "intrinsics": {
+        "image_width_px": 1920,
+        "image_height_px": 1080,
+        "fx_px": 1662.7687752661222,
+        "fy_px": 1662.7687752661222,
+        "cx_px": 960.0,
+        "cy_px": 540.0,
+        "horizontal_fov_deg": 60.0,
+        "vertical_fov_deg": 35.98339777135764,
+        "distortion_model": "none"
+      },
+      "extrinsics_fixed": {
+        "frame": "local east north up",
+        "pitch_deg": -15.0,
+        "roll_deg": 0,
+        "camera_axes": [
+          "right",
+          "down",
+          "forward"
+        ]
+      },
+      "schedule": {
+        "initial_heading_deg": 180,
+        "direction": "clockwise",
+        "yaw_rate_deg_per_s": 12.0,
+        "movement": "full_turn",
+        "arc_deg": 360.0,
+        "arc_centre_deg": null,
+        "period_s": 30.0,
+        "heading_formula": "(initial_heading_deg + yaw_rate_deg_per_s * t) % 360  (clockwise, t in s)"
+      },
+      "nearest_runway_centreline_m": 87.9,
+      "nearest_taxiway_centreline_m": 95.0,
+      "blind_area_file": "camera_blind_areas_enu.json"
+    },
+    {
+      "id": "camera_03",
+      "placement_order": 3,
+      "placement_rule": "free",
+      "candidate_site_id": "pole_-375_-557",
+      "mount": "pole",
+      "building_id": null,
+      "building_name": null,
+      "mount_height_above_roof_m": null,
+      "pole_height_m": 14.0,
+      "position_enu_m": [
+        -375.0701002105829,
+        -556.5056902917931,
+        -2069.2
+      ],
+      "rotates": true,
+      "heading_definition": "degrees clockwise from north",
+      "horizontal_fov_deg": 60.0,
+      "effective_range_m": 150.0,
+      "view_polygon_at_t0_enu_m": [
+        [
+          -375.0701002105829,
+          -556.5056902917931
+        ],
+        [
+          -375.0701002105829,
+          -706.5056902917931
+        ],
+        [
+          -388.1434616227316,
+          -705.934895005555
+        ],
+        [
+          -401.1173268606225,
+          -704.2268532436243
+        ],
+        [
+          -413.892956975961,
+          -701.3945642351534
+        ],
+        [
+          -426.3731217094332,
+          -697.4595834096795
+        ],
+        [
+          -438.4628394716878,
+          -692.4518583472907
+        ],
+        [
+          -450.0701002105829,
+          -686.409500859459
+        ],
+        [
+          -461.10656566323985,
+          -679.3784969351419
+        ],
+        [
+          -471.48824166356377,
+          -671.4123567596398
+        ],
+        [
+          -481.136117388565,
+          -662.5717074697753
+        ],
+        [
+          -489.9767666784296,
+          -652.923831744774
+        ],
+        [
+          -497.9429068539316,
+          -642.5421557444502
+        ],
+        [
+          -504.97391077824864,
+          -631.5056902917933
+        ]
+      ],
+      "intrinsics": {
+        "image_width_px": 1920,
+        "image_height_px": 1080,
+        "fx_px": 1662.7687752661222,
+        "fy_px": 1662.7687752661222,
+        "cx_px": 960.0,
+        "cy_px": 540.0,
+        "horizontal_fov_deg": 60.0,
+        "vertical_fov_deg": 35.98339777135764,
+        "distortion_model": "none"
+      },
+      "extrinsics_fixed": {
+        "frame": "local east north up",
+        "pitch_deg": -15.0,
+        "roll_deg": 0,
+        "camera_axes": [
+          "right",
+          "down",
+          "forward"
+        ]
+      },
+      "schedule": {
+        "initial_heading_deg": 210,
+        "direction": "clockwise",
+        "yaw_rate_deg_per_s": 12.0,
+        "movement": "full_turn",
+        "arc_deg": 360.0,
+        "arc_centre_deg": null,
+        "period_s": 30.0,
+        "heading_formula": "(initial_heading_deg + yaw_rate_deg_per_s * t) % 360  (clockwise, t in s)"
+      },
+      "nearest_runway_centreline_m": 673.4,
+      "nearest_taxiway_centreline_m": 72.4,
+      "blind_area_file": "camera_blind_areas_enu.json"
+    },
+    {
+      "id": "camera_04",
+      "placement_order": 4,
+      "placement_rule": "free",
+      "candidate_site_id": "roof_osm_way_163500101_corner0",
+      "mount": "roof",
+      "building_id": "osm_way_163500101",
+      "building_name": "Concourse B",
+      "mount_height_above_roof_m": 2.0,
+      "pole_height_m": null,
+      "position_enu_m": [
+        -278.14609529369784,
+        -354.3156485949203,
+        -2069.2
+      ],
+      "rotates": true,
+      "heading_definition": "degrees clockwise from north",
+      "horizontal_fov_deg": 60.0,
+      "effective_range_m": 150.0,
+      "view_polygon_at_t0_enu_m": [
+        [
+          -278.14609529369784,
+          -354.3156485949203
+        ],
+        [
+          -203.14609529369784,
+          -484.2194591625861
+        ],
+        [
+          -214.75335603259293,
+          -490.26181665041776
+        ],
+        [
+          -226.8430737948475,
+          -495.26954171280653
+        ],
+        [
+          -239.32323852831968,
+          -499.2045225382805
+        ],
+        [
+          -252.0988686436583,
+          -502.03681154675144
+        ],
+        [
+          -265.0727338815491,
+          -503.7448533086821
+        ],
+        [
+          -278.14609529369784,
+          -504.3156485949203
+        ],
+        [
+          -291.21945670584654,
+          -503.7448533086821
+        ],
+        [
+          -304.19332194373743,
+          -502.03681154675144
+        ],
+        [
+          -316.96895205907595,
+          -499.2045225382805
+        ],
+        [
+          -329.4491167925481,
+          -495.26954171280653
+        ],
+        [
+          -341.53883455480275,
+          -490.2618166504178
+        ],
+        [
+          -353.14609529369784,
+          -484.2194591625861
+        ]
+      ],
+      "intrinsics": {
+        "image_width_px": 1920,
+        "image_height_px": 1080,
+        "fx_px": 1662.7687752661222,
+        "fy_px": 1662.7687752661222,
+        "cx_px": 960.0,
+        "cy_px": 540.0,
+        "horizontal_fov_deg": 60.0,
+        "vertical_fov_deg": 35.98339777135764,
+        "distortion_model": "none"
+      },
+      "extrinsics_fixed": {
+        "frame": "local east north up",
+        "pitch_deg": -15.0,
+        "roll_deg": 0,
+        "camera_axes": [
+          "right",
+          "down",
+          "forward"
+        ]
+      },
+      "schedule": {
+        "initial_heading_deg": 180,
+        "direction": "clockwise",
+        "yaw_rate_deg_per_s": 12.0,
+        "movement": "full_turn",
+        "arc_deg": 360.0,
+        "arc_centre_deg": null,
+        "period_s": 30.0,
+        "heading_formula": "(initial_heading_deg + yaw_rate_deg_per_s * t) % 360  (clockwise, t in s)"
+      },
+      "nearest_runway_centreline_m": 764.6,
+      "nearest_taxiway_centreline_m": 83.2,
+      "blind_area_file": "camera_blind_areas_enu.json"
+    },
+    {
+      "id": "camera_05",
+      "placement_order": 5,
+      "placement_rule": "free",
+      "candidate_site_id": "roof_osm_way_1429454965_corner6",
+      "mount": "roof",
+      "building_id": "osm_way_1429454965",
+      "building_name": null,
+      "mount_height_above_roof_m": 2.0,
+      "pole_height_m": null,
+      "position_enu_m": [
+        216.6398220934081,
+        -337.83088798333023,
+        -2069.2
+      ],
+      "rotates": true,
+      "heading_definition": "degrees clockwise from north",
+      "horizontal_fov_deg": 60.0,
+      "effective_range_m": 150.0,
+      "view_polygon_at_t0_enu_m": [
+        [
+          216.6398220934081,
+          -337.83088798333023
+        ],
+        [
+          291.6398220934081,
+          -207.92707741566443
+        ],
+        [
+          302.676287546065,
+          -214.95808133998145
+        ],
+        [
+          313.057963546389,
+          -222.9242215154835
+        ],
+        [
+          322.70583927139023,
+          -231.7648708053481
+        ],
+        [
+          331.5464885612548,
+          -241.41274653034932
+        ],
+        [
+          339.5126287367569,
+          -251.79442253067333
+        ],
+        [
+          346.5436326610739,
+          -262.83088798333023
+        ],
+        [
+          352.5859901489056,
+          -274.4381487222253
+        ],
+        [
+          357.59371521129435,
+          -286.5278664844799
+        ],
+        [
+          361.52869603676834,
+          -299.0080312179521
+        ],
+        [
+          364.3609850452393,
+          -311.78366133329064
+        ],
+        [
+          366.06902680716996,
+          -324.75752657118153
+        ],
+        [
+          366.6398220934081,
+          -337.83088798333023
+        ]
+      ],
+      "intrinsics": {
+        "image_width_px": 1920,
+        "image_height_px": 1080,
+        "fx_px": 1662.7687752661222,
+        "fy_px": 1662.7687752661222,
+        "cx_px": 960.0,
+        "cy_px": 540.0,
+        "horizontal_fov_deg": 60.0,
+        "vertical_fov_deg": 35.98339777135764,
+        "distortion_model": "none"
+      },
+      "extrinsics_fixed": {
+        "frame": "local east north up",
+        "pitch_deg": -15.0,
+        "roll_deg": 0,
+        "camera_axes": [
+          "right",
+          "down",
+          "forward"
+        ]
+      },
+      "schedule": {
+        "initial_heading_deg": 60,
+        "direction": "clockwise",
+        "yaw_rate_deg_per_s": 12.0,
+        "movement": "full_turn",
+        "arc_deg": 360.0,
+        "arc_centre_deg": null,
+        "period_s": 30.0,
+        "heading_formula": "(initial_heading_deg + yaw_rate_deg_per_s * t) % 360  (clockwise, t in s)"
+      },
+      "nearest_runway_centreline_m": 760.2,
+      "nearest_taxiway_centreline_m": 155.4,
+      "blind_area_file": "camera_blind_areas_enu.json"
+    },
+    {
+      "id": "camera_06",
+      "placement_order": 6,
+      "placement_rule": "free",
+      "candidate_site_id": "pole_-325_-507",
+      "mount": "pole",
+      "building_id": null,
+      "building_name": null,
+      "mount_height_above_roof_m": null,
+      "pole_height_m": 14.0,
+      "position_enu_m": [
+        -325.0701002105829,
+        -506.50569029179314,
+        -2069.2
+      ],
+      "rotates": true,
+      "heading_definition": "degrees clockwise from north",
+      "horizontal_fov_deg": 60.0,
+      "effective_range_m": 150.0,
+      "view_polygon_at_t0_enu_m": [
+        [
+          -325.0701002105829,
+          -506.50569029179314
+        ],
+        [
+          -454.97391077824864,
+          -581.5056902917933
+        ],
+        [
+          -461.01626826608043,
+          -569.898429552898
+        ],
+        [
+          -466.02399332846915,
+          -557.8087117906434
+        ],
+        [
+          -469.95897415394313,
+          -545.3285470571712
+        ],
+        [
+          -472.7912631624141,
+          -532.5529169418327
+        ],
+        [
+          -474.49930492434476,
+          -519.5790517039419
+        ],
+        [
+          -475.0701002105829,
+          -506.50569029179314
+        ],
+        [
+          -474.49930492434476,
+          -493.43232887964444
+        ],
+        [
+          -472.7912631624141,
+          -480.45846364175367
+        ],
+        [
+          -469.95897415394313,
+          -467.6828335264151
+        ],
+        [
+          -466.02399332846915,
+          -455.2026687929428
+        ],
+        [
+          -461.0162682660804,
+          -443.1129510306882
+        ],
+        [
+          -454.9739107782487,
+          -431.50569029179314
+        ]
+      ],
+      "intrinsics": {
+        "image_width_px": 1920,
+        "image_height_px": 1080,
+        "fx_px": 1662.7687752661222,
+        "fy_px": 1662.7687752661222,
+        "cx_px": 960.0,
+        "cy_px": 540.0,
+        "horizontal_fov_deg": 60.0,
+        "vertical_fov_deg": 35.98339777135764,
+        "distortion_model": "none"
+      },
+      "extrinsics_fixed": {
+        "frame": "local east north up",
+        "pitch_deg": -15.0,
+        "roll_deg": 0,
+        "camera_axes": [
+          "right",
+          "down",
+          "forward"
+        ]
+      },
+      "schedule": {
+        "initial_heading_deg": 270,
+        "direction": "clockwise",
+        "yaw_rate_deg_per_s": 12.0,
+        "movement": "full_turn",
+        "arc_deg": 360.0,
+        "arc_centre_deg": null,
+        "period_s": 30.0,
+        "heading_formula": "(initial_heading_deg + yaw_rate_deg_per_s * t) % 360  (clockwise, t in s)"
+      },
+      "nearest_runway_centreline_m": 723.3,
+      "nearest_taxiway_centreline_m": 43.4,
+      "blind_area_file": "camera_blind_areas_enu.json"
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "runway_crossing",
+      "start_label": "south-east, beside runway 04R/22L (moved about 47 m off the runway onto open ground)",
+      "start_enu_m": [
+        1255.4993185549986,
+        -2081.505690291793,
+        -2073.2
+      ],
+      "goal_label": "apron beside Concourse B, Terminal 1",
+      "goal_enu_m": [
+        -280.0,
+        -175.0,
+        -2073.2
+      ],
+      "goal_building_id": null,
+      "goal_is_control_tower": false
+    }
+  ],
+  "placed_for_low_flight": true,
+  "camera_positions_note": "Camera positions and starting headings were chosen with last year's greedy idea re-implemented: each camera's view is a no-fly area and each round keeps the camera that most lengthens the attacker's shortest route (2 m grid), skipping any that leaves no route; stop below 5 m gain. Roof sites and 14 m poles on open ground (not on runways, taxiways or aprons) were allowed. The first 2 cameras were reserved for the runway crossing (one per runway: 10L/28R, 10C/28C), so cameras also see aircraft on those runways. The detour rule gives 0 m on open ground, so each is the allowed pole site nearest where the shortest unseen route crosses that runway, first looking at the crossing.",
+  "obstacles": {
+    "rule": "Every building in buildings_enu.json taller than 10 m (height_m) is a no-fly area; the attacker keeps vehicle_radius_m = 2 m clear of its outline. Lower buildings and everything else are open. There are no other obstacles.",
+    "count": 208,
+    "buildings_flown_over": [
+      "osm_way_1026300050",
+      "osm_way_1026730908",
+      "osm_way_1026822884",
+      "osm_way_1511154367",
+      "osm_way_1511154368",
+      "osm_way_163490959",
+      "osm_way_163500132",
+      "osm_way_674743946",
+      "osm_way_681119431",
+      "osm_way_863162817",
+      "osm_way_863162818"
+    ],
+    "reachability_check": [
+      {
+        "scenario_id": "runway_crossing",
+        "start_clear_of_buildings_m": 343.06479700332255,
+        "goal_clear_of_buildings_m": 15.031500067122698,
+        "start_and_goal_in_same_free_region": true
+      }
+    ]
+  },
+  "tilt_check": {
+    "note": "Rendering only. Camera tilted down so an attacker at flight height is inside the vertical view.",
+    "pitch_deg": -15.0,
+    "vertical_fov_deg": 35.98339777135764,
+    "camera_above_attacker_m": 4.0,
+    "attacker_in_vertical_view_from_m": 6.1614139838039526,
+    "attacker_in_vertical_view_to_m": null,
+    "to_m_null_means": "the view reaches above the horizon, so no far limit from tilt"
+  },
+  "view_model": "Authoritative rule, use this one: a camera sees the attacker when (1) the attacker is within 30 deg either side of the camera heading, (2) within 150 m horizontally, and (3) the straight 3D line from the camera to the attacker does not pass through any building (vertical prisms: outline x [ground, ground + height_m]; the camera's own building counts). seen.py implements this rule. visible_area_enu_m in camera_schedule_10hz.jsonl is the area at flight height that each camera sees at each 0.1 s (arc drawn with 5 deg segments). Intrinsics and pitch are for rendering camera images only.",
+  "buildings_file": "buildings_enu.json",
+  "buildings_lonlat_file": "buildings_lonlat.geojson"
+}

@@ -10,6 +10,7 @@ This repository contains ORD aircraft and drone trajectory datasets.
 - [ORD Control Tower 910 surveillance problem](ord_tower_surveillance_s1/README.md): one attacker start and target beside the tower, four rotating rooftop cameras and their schedule, buildings in ENU, for adversarial path planning.
 - [ORD Control Tower 910 surveillance problem, low flight](ord_tower_surveillance_lowflight_10m/README.md): the same task with the attacker 10 m above ground, below the roofs, so buildings are obstacles and block camera views; cameras re-placed for low flight.
 - [ORD runway-crossing surveillance problem](ord_runway_crossing_10m/README.md): the attacker starts south-east of the south runways, crosses them at 10 m above ground and weaves through the concourses to the apron beside Concourse B, while six rotating cameras on roofs and poles watch, two of them beside the runways.
+- [ORD runway crossing for intent inference](ord_runway_crossing_intent_10m/README.md): the runway-crossing problem with the path-planning team's two attacker paths (worst case and shortest route) as two scenarios, and real ADS-B aircraft from 2026-09-28 23:15:00 to 23:20:30 UTC as friendly agents; positions of every agent every 0.1 s, ADS-B reports and camera detections.
 
 ## New 3 Hz runs
 
